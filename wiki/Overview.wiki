@@ -14,6 +14,8 @@ The project code will exist in three chunks. The first chunk will be a quickie i
 
 = Tournament =
 
+The tournament will probably be open to participation from first- and second-year University of Windsor undergraduate students. Students from my 6-85-211-01 Computer-Aided Analysis II class are especially encouraged to give it a shot.
+
 The tournament will probably happen at the end of the semester. If we're lucky and gather enough participants, we might be able to hold the tournament during class or lab hours. If not, we can always schedule a room somewhere else.
 
 Currently I'm on the hunt for sponsors that could supply prizes for the competition winners. No matter what, I'm fronting a cash prize out of my own pocket whose size will depend on the eventual popularity of this contest.
