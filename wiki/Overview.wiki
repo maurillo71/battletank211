@@ -1,3 +1,19 @@
 #summary Overview of the project.
 
 = Overview =
+
+This project is a combination of a game and an opportunity to learn programming in C++. It is very similar to [http://robocode.sourceforge.com Robocode], but since the course with which this project is associated uses C++, we can't use Robocode because that uses Java. Plus, making something from scratch is fun.
+
+The idea is for students to write programs that control virtual robotic tanks. These tanks try to kill each other. Maybe they're robots gone wrong, maybe they're instruments of opposing military forces in some sort of epic battle, or maybe they've just had a bad day.
+
+The goal of this project is to get students to see how programming can be interesting and not just applicable to math and science.
+
+= Sections =
+
+The project code will exist in three chunks. The first chunk will be a quickie interface in C# to configure arena parameters. The second chunk will be the actual game code that tracks the tanks, uses OpenGL graphics and sound effects. The third chunk is what students have to do: a tiny sub-program that controls a tank's AI. There will be a lot of built-in functions to make this job easier, and I'll also provide a bunch of different sample AIs.
+
+= Tournament =
+
+The tournament will probably happen at the end of the semester. If we're lucky and gather enough participants, we might be able to hold the tournament during class or lab hours. If not, we can always schedule a room somewhere else.
+
+Currently I'm on the hunt for sponsors that could supply prizes for the competition winners. No matter what, I'm fronting a cash prize out of my own pocket whose size will depend on the eventual popularity of this contest.
