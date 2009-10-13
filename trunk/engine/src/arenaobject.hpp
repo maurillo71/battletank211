@@ -25,9 +25,16 @@ public:
 
 	/// Get the angle between this object and another object.
 	/// \param other The other object.
-	/// \return The angle, in radians.
+	/// \return The angle, in radians counterclockwise from east.
 	double GetAngleTo(const ArenaObject &other) const {
 		return atan2(other.py-py, other.px-px);
+	}
+	/// Get the distance between this object and another object.
+	/// \param other The other object.
+	/// \return The distance.
+	double GetDistanceTo(const ArenaObject &other) const {
+		const double dx = other.px-px, dy = other.py-py;
+		return sqrt(dx*dx + dy*dy);
 	}
 
 	/// \param deg An angle in degrees.
