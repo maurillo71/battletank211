@@ -187,6 +187,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\src\bonus.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\bonus.hpp"
+				>
+			</File>
+			<File
 				RelativePath=".\src\bullet.cpp"
 				>
 			</File>
@@ -196,6 +204,14 @@
 			</File>
 			<File
 				RelativePath=".\src\main.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\mobileobject.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\src\mobileobject.hpp"
 				>
 			</File>
 			<File
