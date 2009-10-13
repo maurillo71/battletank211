@@ -12,11 +12,16 @@
 
 /// An object in the arena with a position.
 class ArenaObject {
+protected:
+	ArenaObject() {}
+
 public:
 	/// \return The object's rectangular position x-coordinate, in squares.
 	double GetXPosition() const { return px; }
 	/// \return The object's rectangular position y-coordinate, in squares.
 	double GetYPosition() const { return py; }
+	/// \return The object's radius.
+	double GetRadius() const { return radius; }
 	
 	/// Get the angle between this object and another object.
 	/// \param other The other object.
@@ -44,4 +49,6 @@ protected:
 	double px;
 	/// The object's rectangular position y-coordinate, in squares.
 	double py;
+	/// The object's radius.
+	double radius;
 };

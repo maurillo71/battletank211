@@ -7,11 +7,16 @@
 
 #pragma once
 
+#include <windows.h>
+
 #include "bullet.hpp"
 
 /// This class represents any tank, regardless of whether it's yours or someone
 /// else's.
 class Tank : public MobileObject {
+protected:
+	Tank() {}
+
 public:
 	/// \return The tank turret's heading, in radians counterclockwise from east.
 	double GetTurretHeading() const { return turretheading; }
@@ -22,7 +27,20 @@ public:
 		return GetHeading() - GetAngleTo(other);
 	}
 
+	/// \return True if the tank's health is zero.
+	bool IsDead() const { return !health; }
+
+	/// This is called by the engine when it's your turn. This is the heart of
+	/// the AI code.
+	virtual void Think() = 0;
+
 protected:
+	void Stop() {
+		baseheadingd = 0;
+		turretheadingd = 0;
+		speed = 0;
+	}
+
 	virtual void DisplaceSetup() {
 	}
 
@@ -69,4 +87,9 @@ protected:
 	double rbasemax;
 	/// The maximal turrent rotation angle, in radians counterclockwise.
 	double rturretmax;
+
+	HMODULE dll;
+
+private:
+	friend Arena;
 };

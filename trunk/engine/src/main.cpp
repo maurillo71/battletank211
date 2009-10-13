@@ -8,6 +8,8 @@
 #include <iostream>
 #include <GL/glut.h>
 
+#include "arena.hpp"
+
 using namespace std;
 
 /// The program's entry point.
@@ -16,5 +18,8 @@ using namespace std;
 /// \return The error level for the operating system.
 int main(int argc, char **argv) {
 	glutInit(&argc, argv);
+
+	Arena arena;
+
 	return 0;
 }
