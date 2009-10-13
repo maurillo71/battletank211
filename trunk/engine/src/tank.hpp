@@ -7,22 +7,67 @@
 
 #pragma once
 
-#include "arenaobject.hpp"
+#include "bullet.hpp"
 
 /// This class represents any tank, regardless of whether it's yours or someone
 /// else's.
-class Tank : public ArenaObject
-{
+class Tank : public ArenaObject {
 public:
-	/// \return The tank's heading, in radians counterclockwise from east.
-	double GetHeading() const { return heading; }
+	/// \return The tank base's heading, in radians counterclockwise from east.
+	double GetBaseHeading() const { return baseheading; }
+	/// \return The tank turret's heading, in radians counterclockwise from east.
+	double GetTurretHeading() const { return turretheading; }
 
-	/// \return The heading to another object relative to this tank, in radians
-	///         counterclockwise from east.
+	/// \return The heading to another object relative to the base of this
+	/// tank, in radians counterclockwise.
 	double GetHeadingTo(const ArenaObject &other) const {
-		return heading - GetAngleTo(other);
+		return baseheading - GetAngleTo(other);
 	}
-private:
-	/// The tank's heading, in radians counterclockwise from east.
-	double heading;
+
+protected:
+	virtual void DisplaceSetup() {
+	}
+
+	virtual void Displace()	{
+	}
+
+	/// Take a hit from a bullet.
+	/// \param b A reference to the bullet.
+	void Hit(Bullet &b) {
+		health -= b.GetEnergy();
+		if (health < 0)
+			health = 0;
+	}
+
+protected:
+	/// The tank's base heading, in radians counterclockwise from east.
+	double baseheading;
+	/// The tank's turret heading, in radians counterclockwise from east.
+	double turretheading;
+	/// The tank's base heading angular velocity in radians per turn
+	/// counterclockwise.
+	double baseheadingd;
+	/// The tank's turrent heading angular velocity in radians per turn
+	/// counterclockwise.
+	double turretheadingd;
+
+	/// The tank's health, from 0 to hmax.
+	double health;
+
+	/// The energy consumed per unit of speed.
+	double epers;
+	/// The damage done per unit of bullet energy.
+	double dpere;
+	/// The energy regenerated per turn.
+	double epert;
+	/// The maximal health.
+	double hmax;
+	/// The maximal energy.
+	double emax;
+	/// The maximal speed.
+	double smax;
+	/// The maximal base rotation angle, in radians counterclockwise.
+	double rbasemax;
+	/// The maximal turrent rotation angle, in radians counterclockwise.
+	double rturretmax;
 };
