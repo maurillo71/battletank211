@@ -10,6 +10,8 @@
 #include "arenaobject.hpp"
 
 /// The class representing a bullet flying through the arena.
-class Bullet : public ArenaObject
-{
+class Bullet : public ArenaObject {
+public:
+	/// \return The bullet's energy.
+	double GetEnergy() const { return energy; }
 };

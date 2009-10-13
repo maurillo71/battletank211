@@ -12,6 +12,8 @@
 
 /// The class representing a battle arena and all of the objects that it
 /// contains.
-class Arena
-{
+class Arena {
+private:
+	/// The number of real-time seconds per turn.
+	double spert;
 };
