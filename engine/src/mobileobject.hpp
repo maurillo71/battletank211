@@ -9,6 +9,8 @@
 
 #include "arenaobject.hpp"
 
+class Arena;
+
 class MobileObject : public ArenaObject
 {
 protected:
@@ -21,7 +23,7 @@ public:
 	/// \return The object's rectangular velocity y-coordinate, in squares per
 	///         turn.
 	double GetYVelocity() const { return speed*sin(heading); }
-	
+
 	/// \return The object's speed, in squares per turn.
 	double GetSpeed() const { return speed; }
 	/// \return The object's heading, in radians counterclockwise from east.
@@ -61,4 +63,7 @@ protected:
 	double vy;
 	/// The old value of t used in Displace.
 	double told;
+
+private:
+	friend Arena;
 };

@@ -17,10 +17,6 @@ protected:
 	MyTank() {}
 
 public:
-	/// This is called by the engine when it's your turn. This is the heart of
-	/// the AI code.
-	virtual void Think() = 0;
-
 	/// Limit a variable to within [-xmax, xmax].
 	/// \param x The variable to limit.
 	/// \param y The variable that will get the limited value.
