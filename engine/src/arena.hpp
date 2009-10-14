@@ -9,7 +9,6 @@
 
 #include <list>
 
-#include "bullet.hpp"
 #include "mytank.hpp"
 #include "bonus.hpp"
 
