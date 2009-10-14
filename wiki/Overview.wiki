@@ -19,7 +19,7 @@ Currently, to build the code, you need Windows and the following software:
     * [http://www.microsoft.com/express Microsoft Visual C++ Express 2008]
     * Any subversion client. [http://tortoisesvn.tigris.org TortoiseSVN] is good
 
-The "engine" project builds a .dll that contains the basic game structure code; all other binaries will rely on this. The "gamegui" project builds an .exe that contains the graphics code and essentially displays the engine. All of the "tank_" projects contain example tanks. To make your own, it's easiest to just copy one of these, rename it, gut it and replace the code with your own. Each tank project builds a tank_*.dll, and the engine scans for this pattern so make sure that it's named in the same way.
+The "engine" project builds a .dll that contains the basic game structure code; all other binaries will rely on this. The "gamegui" project builds an .exe that contains the graphics code and essentially displays the engine. All of the "tank_" projects contain example tanks. To make your own, it's easiest to just copy one of these, rename it, gut it and replace the code with your own. Each tank project builds a tank_foo.dll, and the engine scans for this pattern so make sure that it's named in the same way.
 
 To build the documentation, you need
     * [http://www.stack.nl/~dimitri/doxygen Doxygen]
