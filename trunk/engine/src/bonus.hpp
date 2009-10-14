@@ -10,6 +10,6 @@
 #include "arenaobject.hpp"
 
 /// A bonus that tanks can pick up.
-class Bonus : public ArenaObject
+class DLL Bonus : public ArenaObject
 {
 };

@@ -10,7 +10,7 @@
 #include "tank.hpp"
 
 /// This class represents the tank controlled by the user's own AI.
-class MyTank : public Tank {
+class DLL MyTank : public Tank {
 protected:
 	/// The constructor. Protected because this class is abstract (only
 	/// children can be instantiated).
@@ -21,11 +21,7 @@ public:
 	/// \param x The variable to limit.
 	/// \param y The variable that will get the limited value.
 	/// \param xmax The limit.
-	static void Limit(double x, double &y, double xmax) {
-		if (x > xmax) y = xmax;
-		else if (x < -xmax) y = -xmax;
-		else y = x;
-	}
+	static void Limit(double x, double &y, double xmax);
 
 	/// Rotate the tank's base. Repeated calls to this function within a single
 	/// turn have no effect. The angle is limited by LimitRotation.

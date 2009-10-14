@@ -10,8 +10,14 @@
 #define _USE_MATH_DEFINES
 #include <cmath>
 
+#ifdef PROJECT_engine
+#	define DLL __declspec(dllexport)
+#else
+#	define DLL __declspec(dllimport)
+#endif
+
 /// An object in the arena with a position.
-class ArenaObject {
+class DLL ArenaObject {
 protected:
 	ArenaObject() {}
 

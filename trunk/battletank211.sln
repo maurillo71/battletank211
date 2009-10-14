@@ -8,6 +8,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sittingduck", "tanks\sittin
 		{E48C26DF-82F1-48CE-B483-66E99B525116} = {E48C26DF-82F1-48CE-B483-66E99B525116}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gamegui", "gamegui\gamegui.vcproj", "{A9F10B1E-737F-46DA-9561-BA4154F1E14F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E48C26DF-82F1-48CE-B483-66E99B525116} = {E48C26DF-82F1-48CE-B483-66E99B525116}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -22,6 +27,10 @@ Global
 		{BC516CFC-9FBE-4973-9FEA-D8B50F166F63}.Debug|Win32.Build.0 = Debug|Win32
 		{BC516CFC-9FBE-4973-9FEA-D8B50F166F63}.Release|Win32.ActiveCfg = Release|Win32
 		{BC516CFC-9FBE-4973-9FEA-D8B50F166F63}.Release|Win32.Build.0 = Release|Win32
+		{A9F10B1E-737F-46DA-9561-BA4154F1E14F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A9F10B1E-737F-46DA-9561-BA4154F1E14F}.Debug|Win32.Build.0 = Debug|Win32
+		{A9F10B1E-737F-46DA-9561-BA4154F1E14F}.Release|Win32.ActiveCfg = Release|Win32
+		{A9F10B1E-737F-46DA-9561-BA4154F1E14F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
