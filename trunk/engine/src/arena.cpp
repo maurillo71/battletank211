@@ -8,19 +8,28 @@
 #include "arena.hpp"
 
 Arena::Arena() {
-	HMODULE dll = LoadLibrary("sittingduck.dll");
 	typedef MyTank *(__cdecl *const InstProc)();
-	InstProc GetNewUserTank = (InstProc)GetProcAddress(dll, "GetNewUserTank");
-	MyTank *const newtank = GetNewUserTank();
-	newtank->dll = dll;
-	tanks.push_back(newtank);
+
+	// Search for and load tank DLLs
+	WIN32_FIND_DATA found;
+	HANDLE hsearch = FindFirstFile("tank_*.dll", &found);
+	if (hsearch != INVALID_HANDLE_VALUE) do {
+		HMODULE dll = LoadLibrary(found.cFileName);
+		InstProc GetNewUserTank = (InstProc)GetProcAddress(dll, "GetNewUserTank");
+		MyTank *const newtank = GetNewUserTank();
+		newtank->dll = dll;
+		tanks.push_back(newtank);
+	} while (FindNextFile(hsearch, &found));
+	const BOOL success = FindClose(hsearch);
 }
 
 Arena::~Arena() {
-	HMODULE dll = tanks.front()->dll;
-	delete tanks.front();
-	tanks.pop_front();
-	const BOOL success = FreeLibrary(dll);
+	// Delete all tanks and unload their DLLs
+	for (TankList::iterator i = tanks.begin(); i != tanks.end(); i = tanks.erase(i)) {
+		const HMODULE dll = (*i)->dll;
+		delete *i;
+		const BOOL success = FreeLibrary(dll);
+	}
 }
 
 void Arena::DoTurn() {

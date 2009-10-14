@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="doc"
+	ProjectGUID="{CDAFF4D5-2A3A-4318-8035-5B8C16B952FC}"
+	RootNamespace="doc"
+	TargetFrameworkVersion="196613"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Doc|Win32"
+			OutputDirectory="$(ProjectDir)"
+			IntermediateDirectory="$(ProjectDir)"
+			ConfigurationType="10"
+			CharacterSet="2"
+			BuildLogFile=""
+			EnableManagedIncrementalBuild="0"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+				Description="Building doxygen documentation..."
+				CommandLine="doxygen"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="Building doxygen documentation..."
+				CommandLine="doxygen&#x0D;&#x0A;"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<File
+			RelativePath=".\doxyfile"
+			>
+		</File>
+		<File
+			RelativePath=".\footer.html"
+			>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

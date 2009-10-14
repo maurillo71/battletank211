@@ -11,6 +11,8 @@
 
 class Arena;
 
+/// An object in the arena that's able to move. Has a speed and a heading
+/// angle.
 class DLL MobileObject : public ArenaObject
 {
 protected:
@@ -38,6 +40,7 @@ protected:
 	virtual void Displace(double t);
 
 protected:
+	/// The object's speed, in squares per turn.
 	double speed;
 	/// The object's heading, in radians counterclockwise from east.
 	double heading;
@@ -49,5 +52,6 @@ protected:
 	double told;
 
 private:
+	/// Allow the Arena access to the internals of this class.
 	friend Arena;
 };

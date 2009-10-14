@@ -24,8 +24,9 @@ public:
 	/// \return The tank turret's heading, in radians counterclockwise from east.
 	double GetTurretHeading() const { return turretheading; }
 
-	/// \return The heading to another object relative to the base of this
-	/// tank, in radians counterclockwise.
+	/// Gets the heading to another object relative to the base of this tank.
+	/// \param other The other arena object.
+	/// \return The heading angle, in radians counterclockwise.
 	double GetHeadingTo(const ArenaObject &other) const {
 		return GetHeading() - GetAngleTo(other);
 	}
@@ -38,15 +39,18 @@ public:
 	virtual void Think() = 0;
 
 protected:
+	/// Stop the motion of this tank.
 	void Stop() {
 		baseheadingd = 0;
 		turretheadingd = 0;
 		speed = 0;
 	}
 
+	/// Set up a displacement.
 	virtual void DisplaceSetup() {
 	}
 
+	/// Displace this tank.
 	virtual void Displace()	{
 	}
 
@@ -91,8 +95,10 @@ protected:
 	/// The maximal turrent rotation angle, in radians counterclockwise.
 	double rturretmax;
 
+	/// The handle to the DLL in which the user code exists for this tank.
 	HMODULE dll;
 
 private:
+	/// Allow the Arena access to the internals of this class.
 	friend Arena;
 };
