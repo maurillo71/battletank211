@@ -16,8 +16,10 @@
 /// contains.
 class DLL Arena {
 public:
+	/// The constructor. Sets up the arena.
 	Arena();
 
+	/// The destructor. Cleans up objects that were created on construction.
 	~Arena();
 
 	/// Perform one arena turn.
