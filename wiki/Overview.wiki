@@ -12,6 +12,21 @@ The goal of this project is to get students to see how programming can be intere
 
 The project code will exist in three chunks. The first chunk will be a quickie interface in C# to configure arena parameters. The second chunk will be the actual game code that tracks the tanks, uses OpenGL graphics and sound effects. The third chunk is what students have to do: a tiny sub-program that controls a tank's AI. There will be a lot of built-in functions to make this job easier, and I'll also provide a bunch of different sample AIs.
 
+= Building =
+
+Currently, to build the code, you need Windows and the following software:
+    * [http://www.xmission.com/~nate/glut.html OpenGL win32 port by Nate Robins] - make sure that this is visible from the code. If you plan on using it elsewhere, dump it in a public folder and add it to Tools > Options > Projects and Solutions > VC++ directories > Win32 include files. Otherwise just dump it locally.
+    * [http://www.microsoft.com/express Microsoft Visual C++ Express 2008]
+    * Any subversion client. [http://tortoisesvn.tigris.org TortoiseSVN] is good
+
+The "engine" project builds a .dll that contains the basic game structure code; all other binaries will rely on this. The "gamegui" project builds an .exe that contains the graphics code and essentially displays the engine. All of the "tank_" projects contain example tanks. To make your own, it's easiest to just copy one of these, rename it, gut it and replace the code with your own. Each tank project builds a tank_*.dll, and the engine scans for this pattern so make sure that it's named in the same way.
+
+To build the documentation, you need
+    * [http://www.stack.nl/~dimitri/doxygen Doxygen]
+    * [http://www.graphviz.org/ Graphviz]
+
+Once you have those, just set the solution configuration to "doc" and build.
+
 = Tournament =
 
 The tournament will probably be open to participation from first- and second-year University of Windsor undergraduate students. Students from my 6-85-211-01 Computer-Aided Analysis II class are especially encouraged to give it a shot.
