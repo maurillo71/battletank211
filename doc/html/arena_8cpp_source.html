@@ -25,7 +25,7 @@
 <h1>arena.cpp</h1><a href="arena_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
 <a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="arena_8hpp.html">arena.hpp</a>&quot;</span>
 <a name="l00009"></a>00009 
-<a name="l00010"></a>00010 Arena::Arena() {
+<a name="l00010"></a><a class="code" href="class_arena.html#a74f105bc709d4728fb07f1984abfd345">00010</a> <a class="code" href="class_arena.html#a74f105bc709d4728fb07f1984abfd345" title="The constructor. Sets up the arena.">Arena::Arena</a>() {
 <a name="l00011"></a>00011     <span class="keyword">typedef</span> <a class="code" href="class_my_tank.html" title="This class represents the tank controlled by the user&amp;#39;s own AI.">MyTank</a> *(__cdecl *<span class="keyword">const</span> InstProc)();
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013     <span class="comment">// Search for and load tank DLLs</span>
@@ -34,14 +34,14 @@
 <a name="l00016"></a>00016     <span class="keywordflow">if</span> (hsearch != INVALID_HANDLE_VALUE) <span class="keywordflow">do</span> {
 <a name="l00017"></a>00017         HMODULE dll = LoadLibrary(found.cFileName);
 <a name="l00018"></a>00018         InstProc GetNewUserTank = (InstProc)GetProcAddress(dll, <span class="stringliteral">&quot;GetNewUserTank&quot;</span>);
-<a name="l00019"></a>00019         <a class="code" href="class_my_tank.html" title="This class represents the tank controlled by the user&amp;#39;s own AI.">MyTank</a> *<span class="keyword">const</span> newtank = GetNewUserTank();
+<a name="l00019"></a>00019         MyTank *<span class="keyword">const</span> newtank = GetNewUserTank();
 <a name="l00020"></a>00020         newtank-&gt;<a class="code" href="class_tank.html#a71bc17711ebe593732fc8be2421f6cdd" title="The handle to the DLL in which the user code exists for this tank.">dll</a> = dll;
 <a name="l00021"></a>00021         <a class="code" href="class_arena.html#a69c690cab54e2bca91bd4e51ef6d6ab7" title="The list of tanks.">tanks</a>.push_back(newtank);
 <a name="l00022"></a>00022     } <span class="keywordflow">while</span> (FindNextFile(hsearch, &amp;found));
 <a name="l00023"></a>00023     <span class="keyword">const</span> BOOL success = FindClose(hsearch);
 <a name="l00024"></a>00024 }
 <a name="l00025"></a>00025 
-<a name="l00026"></a>00026 Arena::~Arena() {
+<a name="l00026"></a><a class="code" href="class_arena.html#ae21b399e9e3f6b8ac4ecc44d7d1667fc">00026</a> <a class="code" href="class_arena.html#ae21b399e9e3f6b8ac4ecc44d7d1667fc" title="The destructor. Cleans up objects that were created on construction.">Arena::~Arena</a>() {
 <a name="l00027"></a>00027     <span class="comment">// Delete all tanks and unload their DLLs</span>
 <a name="l00028"></a>00028     <span class="keywordflow">for</span> (TankList::iterator i = <a class="code" href="class_arena.html#a69c690cab54e2bca91bd4e51ef6d6ab7" title="The list of tanks.">tanks</a>.begin(); i != <a class="code" href="class_arena.html#a69c690cab54e2bca91bd4e51ef6d6ab7" title="The list of tanks.">tanks</a>.end(); i = <a class="code" href="class_arena.html#a69c690cab54e2bca91bd4e51ef6d6ab7" title="The list of tanks.">tanks</a>.erase(i)) {
 <a name="l00029"></a>00029         <span class="keyword">const</span> HMODULE dll = (*i)-&gt;dll;

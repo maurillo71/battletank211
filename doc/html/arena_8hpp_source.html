@@ -32,29 +32,29 @@
 <a name="l00014"></a>00014 
 <a name="l00017"></a><a class="code" href="class_arena.html">00017</a> <span class="keyword">class </span><a class="code" href="arenaobject_8hpp.html#a4466639cd64ebf372a621168c5e25964" title="Import the classes from the engine DLL.">DLL</a> <a class="code" href="class_arena.html" title="The class representing a battle arena and all of the objects that it contains.">Arena</a> {
 <a name="l00018"></a>00018 <span class="keyword">public</span>:
-<a name="l00019"></a>00019     <a class="code" href="class_arena.html" title="The class representing a battle arena and all of the objects that it contains.">Arena</a>();
-<a name="l00020"></a>00020 
-<a name="l00021"></a>00021     ~<a class="code" href="class_arena.html" title="The class representing a battle arena and all of the objects that it contains.">Arena</a>();
-<a name="l00022"></a>00022 
-<a name="l00024"></a>00024     <span class="keywordtype">void</span> DoTurn();
-<a name="l00025"></a>00025 
-<a name="l00028"></a>00028     <span class="keywordtype">void</span> Tick(<span class="keywordtype">double</span> t);
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030 <span class="keyword">private</span>:
-<a name="l00033"></a><a class="code" href="class_arena.html#adf440c51f3b1087e2763f69b9e98c5c0">00033</a>     <span class="keyword">typedef</span> std::list&lt;Tank*&gt; TankList;
-<a name="l00035"></a><a class="code" href="class_arena.html#aef4ab5335308c8e6a0cbed22bb24c62d">00035</a>     <span class="keyword">typedef</span> std::list&lt;Bullet&gt; BulletList;
-<a name="l00037"></a><a class="code" href="class_arena.html#a42a795bffc86ae2c3043eea9fc3536fe">00037</a>     <span class="keyword">typedef</span> std::list&lt;Bonus&gt; BonusList;
-<a name="l00040"></a><a class="code" href="class_arena.html#acf4a6b499af4bb80d40f61c31372d881">00040</a>     <span class="keyword">typedef</span> std::list&lt;ArenaObject*&gt; ArenaObjectList;
-<a name="l00043"></a><a class="code" href="class_arena.html#a1e0171ae8410992dd46b438924a66ba1">00043</a>     <span class="keyword">typedef</span> std::list&lt;MobileObject*&gt; MobileObjectList;
-<a name="l00044"></a>00044 
-<a name="l00046"></a><a class="code" href="class_arena.html#af6571f0520319fa0903a15724194413b">00046</a>     <span class="keywordtype">double</span> spert;
-<a name="l00047"></a>00047 
-<a name="l00049"></a><a class="code" href="class_arena.html#a69c690cab54e2bca91bd4e51ef6d6ab7">00049</a>     TankList tanks;
-<a name="l00051"></a><a class="code" href="class_arena.html#aa4536569c16c92f235f3f52aa6f06a9d">00051</a>     BulletList bullets;
-<a name="l00053"></a><a class="code" href="class_arena.html#a173aa5488b57883589c02f6ae8f3acc4">00053</a>     BonusList bonuses;
-<a name="l00055"></a><a class="code" href="class_arena.html#a20b20ee699ba388193172a4add7be9b4">00055</a>     ArenaObjectList objects;
-<a name="l00057"></a><a class="code" href="class_arena.html#a4f70b723688a0a5c963032d78833948e">00057</a>     MobileObjectList mobiles;
-<a name="l00058"></a>00058 };
+<a name="l00020"></a>00020     <a class="code" href="class_arena.html" title="The class representing a battle arena and all of the objects that it contains.">Arena</a>();
+<a name="l00021"></a>00021 
+<a name="l00023"></a>00023     ~<a class="code" href="class_arena.html" title="The class representing a battle arena and all of the objects that it contains.">Arena</a>();
+<a name="l00024"></a>00024 
+<a name="l00026"></a>00026     <span class="keywordtype">void</span> DoTurn();
+<a name="l00027"></a>00027 
+<a name="l00030"></a>00030     <span class="keywordtype">void</span> Tick(<span class="keywordtype">double</span> t);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keyword">private</span>:
+<a name="l00035"></a><a class="code" href="class_arena.html#adf440c51f3b1087e2763f69b9e98c5c0">00035</a>     <span class="keyword">typedef</span> std::list&lt;Tank*&gt; TankList;
+<a name="l00037"></a><a class="code" href="class_arena.html#aef4ab5335308c8e6a0cbed22bb24c62d">00037</a>     <span class="keyword">typedef</span> std::list&lt;Bullet&gt; BulletList;
+<a name="l00039"></a><a class="code" href="class_arena.html#a42a795bffc86ae2c3043eea9fc3536fe">00039</a>     <span class="keyword">typedef</span> std::list&lt;Bonus&gt; BonusList;
+<a name="l00042"></a><a class="code" href="class_arena.html#acf4a6b499af4bb80d40f61c31372d881">00042</a>     <span class="keyword">typedef</span> std::list&lt;ArenaObject*&gt; ArenaObjectList;
+<a name="l00045"></a><a class="code" href="class_arena.html#a1e0171ae8410992dd46b438924a66ba1">00045</a>     <span class="keyword">typedef</span> std::list&lt;MobileObject*&gt; MobileObjectList;
+<a name="l00046"></a>00046 
+<a name="l00048"></a><a class="code" href="class_arena.html#af6571f0520319fa0903a15724194413b">00048</a>     <span class="keywordtype">double</span> spert;
+<a name="l00049"></a>00049 
+<a name="l00051"></a><a class="code" href="class_arena.html#a69c690cab54e2bca91bd4e51ef6d6ab7">00051</a>     TankList tanks;
+<a name="l00053"></a><a class="code" href="class_arena.html#aa4536569c16c92f235f3f52aa6f06a9d">00053</a>     BulletList bullets;
+<a name="l00055"></a><a class="code" href="class_arena.html#a173aa5488b57883589c02f6ae8f3acc4">00055</a>     BonusList bonuses;
+<a name="l00057"></a><a class="code" href="class_arena.html#a20b20ee699ba388193172a4add7be9b4">00057</a>     ArenaObjectList objects;
+<a name="l00059"></a><a class="code" href="class_arena.html#a4f70b723688a0a5c963032d78833948e">00059</a>     MobileObjectList mobiles;
+<a name="l00060"></a>00060 };
 </pre></div></div>
 <hr size="1"><address style="text-align: right;"><small>
 Generated by&nbsp;<a href="http://www.doxygen.org/index.html"><img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.6.1</small></address>
