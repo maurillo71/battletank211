@@ -10,7 +10,7 @@
 #include "mobileobject.hpp"
 
 /// The class representing a bullet flying through the arena.
-class Bullet : public MobileObject {
+class DLL Bullet : public MobileObject {
 public:
 	/// \return The bullet's energy.
 	double GetDamage() const { return damage; }

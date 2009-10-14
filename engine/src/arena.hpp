@@ -15,7 +15,7 @@
 
 /// The class representing a battle arena and all of the objects that it
 /// contains.
-class Arena {
+class DLL Arena {
 public:
 	Arena();
 
@@ -29,14 +29,14 @@ public:
 	void Tick(double t);
 
 private:
-	/// The number of real-time seconds per turn.
-	double spert;
-
 	typedef std::list<Tank*> TankList;
 	typedef std::list<Bullet> BulletList;
 	typedef std::list<Bonus> BonusList;
 	typedef std::list<ArenaObject*> ArenaObjectList;
 	typedef std::list<MobileObject*> MobileObjectList;
+
+	/// The number of real-time seconds per turn.
+	double spert;
 
 	/// The list of tanks.
 	TankList tanks;

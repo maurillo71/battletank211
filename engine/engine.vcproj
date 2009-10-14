@@ -20,8 +20,9 @@
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="1"
+			ConfigurationType="2"
 			CharacterSet="2"
+			BuildLogFile=""
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -41,13 +42,14 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;PROJECT_$(ProjectName)"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
-				WarningLevel="3"
+				WarningLevel="4"
 				DebugInformationFormat="4"
+				DisableSpecificWarnings="4251"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -62,7 +64,7 @@
 				Name="VCLinkerTool"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -91,9 +93,10 @@
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="1"
-			CharacterSet="1"
+			ConfigurationType="2"
+			CharacterSet="2"
 			WholeProgramOptimization="1"
+			BuildLogFile=""
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -112,14 +115,24 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="2"
+				Optimization="3"
+				InlineFunctionExpansion="2"
 				EnableIntrinsicFunctions="true"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS"
+				FavorSizeOrSpeed="1"
+				OmitFramePointers="true"
+				EnableFiberSafeOptimizations="true"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;PROJECT_$(ProjectName)"
+				StringPooling="true"
 				RuntimeLibrary="2"
+				BufferSecurityCheck="false"
 				EnableFunctionLevelLinking="true"
-				UsePrecompiledHeader="0"
-				WarningLevel="3"
-				DebugInformationFormat="3"
+				EnableEnhancedInstructionSet="2"
+				FloatingPointModel="2"
+				RuntimeTypeInfo="false"
+				WarningLevel="4"
+				DebugInformationFormat="0"
+				CallingConvention="1"
+				DisableSpecificWarnings="4251"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -133,7 +146,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="1"
-				GenerateDebugInformation="true"
+				AssemblyDebug="2"
 				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -200,10 +213,6 @@
 			</File>
 			<File
 				RelativePath=".\src\bullet.hpp"
-				>
-			</File>
-			<File
-				RelativePath=".\src\main.cpp"
 				>
 			</File>
 			<File

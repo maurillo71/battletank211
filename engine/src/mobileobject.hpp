@@ -11,7 +11,7 @@
 
 class Arena;
 
-class MobileObject : public ArenaObject
+class DLL MobileObject : public ArenaObject
 {
 protected:
 	MobileObject() {}
@@ -31,27 +31,11 @@ public:
 
 protected:
 	/// Set up the displacement working variables.
-	virtual void DisplaceSetup() {
-		if (speed) {
-			vx = GetXVelocity();
-			vy = GetYVelocity();
-		}
-		else {
-			vx = 0;
-			vy = 0;
-		}
-	}
+	virtual void DisplaceSetup();
 
 	/// Displace the position toward its destination.
 	/// \param t The turn time, from 0 (turn start) to 1 (turn end).
-	virtual void Displace(double t) {
-		if (speed) {
-			double td = t - told;
-			px += vx*td;
-			py += vy*td;
-			told = t;
-		}
-	}
+	virtual void Displace(double t);
 
 protected:
 	double speed;

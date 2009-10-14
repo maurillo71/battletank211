@@ -16,7 +16,7 @@ using namespace std;
 /// \param argc The number of command-line arguments. glutInit might change this.
 /// \param argv The command-line argument list. glutInit might change this.
 /// \return The error level for the operating system.
-int main(int argc, char **argv) {
+int __cdecl main(int argc, char **argv) {
 	glutInit(&argc, argv);
 
 	Arena arena;

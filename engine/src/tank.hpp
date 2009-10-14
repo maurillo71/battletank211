@@ -7,13 +7,16 @@
 
 #pragma once
 
+#define WIN32_LEAN_AND_MEAN
+#define VC_EXTRALEAN
+#define STRICT
 #include <windows.h>
 
 #include "bullet.hpp"
 
 /// This class represents any tank, regardless of whether it's yours or someone
 /// else's.
-class Tank : public MobileObject {
+class DLL Tank : public MobileObject {
 protected:
 	Tank() {}
 

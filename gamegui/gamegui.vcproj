@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="sittingduck"
-	ProjectGUID="{BC516CFC-9FBE-4973-9FEA-D8B50F166F63}"
-	RootNamespace="sittingduck"
+	Name="gamegui"
+	ProjectGUID="{A9F10B1E-737F-46DA-9561-BA4154F1E14F}"
+	RootNamespace="gamegui"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -20,8 +20,8 @@
 			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="2"
-			CharacterSet="1"
+			ConfigurationType="1"
+			CharacterSet="2"
 			BuildLogFile=""
 			>
 			<Tool
@@ -43,7 +43,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="&quot;$(SolutionDir)engine\src&quot;"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL"
+				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -65,7 +65,7 @@
 				Name="VCLinkerTool"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
-				SubSystem="2"
+				SubSystem="1"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -94,7 +94,7 @@
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="2"
+			ConfigurationType="1"
 			CharacterSet="2"
 			WholeProgramOptimization="1"
 			BuildLogFile=""
@@ -123,7 +123,7 @@
 				OmitFramePointers="true"
 				EnableFiberSafeOptimizations="true"
 				AdditionalIncludeDirectories="&quot;$(SolutionDir)engine\src&quot;"
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
 				StringPooling="true"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="false"
@@ -132,7 +132,6 @@
 				FloatingPointModel="2"
 				RuntimeTypeInfo="false"
 				WarningLevel="4"
-				DebugInformationFormat="0"
 				CallingConvention="1"
 				DisableSpecificWarnings="4251"
 			/>
@@ -149,7 +148,7 @@
 				Name="VCLinkerTool"
 				LinkIncremental="1"
 				AssemblyDebug="2"
-				SubSystem="2"
+				SubSystem="1"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
 				TargetMachine="1"
@@ -181,7 +180,7 @@
 	</References>
 	<Files>
 		<File
-			RelativePath=".\usertank.cpp"
+			RelativePath=".\main.cpp"
 			>
 		</File>
 	</Files>
