@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="sittingduck"
+	Name="tank_sittingduck"
 	ProjectGUID="{BC516CFC-9FBE-4973-9FEA-D8B50F166F63}"
 	RootNamespace="sittingduck"
 	Keyword="Win32Proj"
@@ -66,8 +66,6 @@
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
 				AssemblyDebug="1"
-				GenerateMapFile="true"
-				MapExports="true"
 				SubSystem="2"
 				ResourceOnlyDLL="true"
 				TargetMachine="1"

@@ -7,12 +7,15 @@
 
 #pragma once
 
+/// Enable the use of M_PI, etc.
 #define _USE_MATH_DEFINES
 #include <cmath>
 
 #ifdef PROJECT_engine
+/// Export the classes for the engine DLL.
 #	define DLL __declspec(dllexport)
 #else
+/// Import the classes from the engine DLL.
 #	define DLL __declspec(dllimport)
 #endif
 
