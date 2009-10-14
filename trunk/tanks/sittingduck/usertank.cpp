@@ -8,5 +8,8 @@ public:
 	}
 };
 
-__declspec(dllexport) MyTank *__cdecl
-GetNewUserTank() { return new UserTank; }
+
+extern "C" {
+	__declspec(dllexport) MyTank *__cdecl
+	GetNewUserTank() { return new UserTank; }
+}

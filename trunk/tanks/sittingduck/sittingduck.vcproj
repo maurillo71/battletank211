@@ -65,7 +65,11 @@
 				Name="VCLinkerTool"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
+				AssemblyDebug="1"
+				GenerateMapFile="true"
+				MapExports="true"
 				SubSystem="2"
+				ResourceOnlyDLL="true"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -152,6 +156,7 @@
 				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
+				ResourceOnlyDLL="true"
 				TargetMachine="1"
 			/>
 			<Tool
